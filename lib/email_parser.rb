@@ -16,13 +16,11 @@ attr_accessor :emails :new
 
   def parse
     @emails = @emails.split(" ")
-    @emails.collect do |email|
+    @emails.each do |email|
       email = email.chomp(",")
-    end
-    @emails.each do |one_email|
-      @@all.none?{|x| x == one_email}
-        @@all << one_email
-      end
+        @@all.none? {|x| x == one_email}
+          @@all << email
+        end  
     end
   end
 
