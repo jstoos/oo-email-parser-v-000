@@ -20,7 +20,7 @@ attr_accessor :emails :new
       email = email.chomp(",")
     end
     @emails.each do |one_email|
-      @@all.none? {|x| x=one_email}
+      @@all.none? {|x| x = one_email}
         @@all << one_email
       end
     end
