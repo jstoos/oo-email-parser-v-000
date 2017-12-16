@@ -15,6 +15,7 @@ attr_accessor :emails, :new, :all
   end
 
   def parse
+    @all = []
     @emails = @emails.split(" ")
     @emails.each do |email|
       email = email.chomp(",")
