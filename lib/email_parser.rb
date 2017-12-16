@@ -18,9 +18,9 @@ attr_accessor :emails :new
     @emails = @emails.split(" ")
     @emails.each do |email|
       email = email.chomp(",")
-        @@all.none? {|x| x == one_email}
+        if @@all.none? {|x| x == one_email}
           @@all << email
-        end  
+        end
     end
   end
 
