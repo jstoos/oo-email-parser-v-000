@@ -22,6 +22,7 @@ attr_accessor :emails, :new
           @@all << email
         end
     end
+    @@all
   end
 
 end
