@@ -8,14 +8,10 @@ class EmailParser
 
 @@all = []
 
-attr_accessor :emails
+attr_accessor :emails :new
 
   def initialize(list_of_emails)
       @emails = list_of_emails
-  end
-  #
-  def new
-
   end
 
   def parse
@@ -23,10 +19,22 @@ attr_accessor :emails
     @emails.collect do |email|
       email = email.chomp(",")
     end
-
+    @emails.each do |one_email|
+      @@all.none? {|x| x==one_email}
+        @@all << one_email
+      end
+    end
   end
 
 end
+
+# def parse
+#   @emails = @emails.split(" ")
+#   @emails.collect do |email|
+#     email = email.chomp(",")
+#   end
+# end
+
 
 # @emails.collect do |email|
 #   email.chomp(",")
