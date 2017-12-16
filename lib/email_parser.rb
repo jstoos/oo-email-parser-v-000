@@ -6,8 +6,6 @@ require "pry"
 # or whitespace (' ').
 class EmailParser
 
-# @@all = []
-
 attr_accessor :emails, :new, :all
 
   def initialize(list_of_emails)
@@ -28,21 +26,4 @@ attr_accessor :emails, :new, :all
 
 end
 
-# def parse
-#   @emails = @emails.split(" ")
-#   @emails.collect do |email|
-#     email = email.chomp(",")
-#   end
-# end
 
-
-# @emails.collect do |email|
-#   email.chomp(",")
-#   @@all.include?(email.)
-#
-# end
-# @emails.each do |email|
-#   @@all.none? {|x| x = email.chomp(",")}
-#     @@all << email.chomp(",")
-#   end
-# end
