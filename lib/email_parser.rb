@@ -6,9 +6,9 @@ require "pry"
 # or whitespace (' ').
 class EmailParser
 
-@@all = []
+# @@all = []
 
-attr_accessor :emails, :new
+attr_accessor :emails, :new, :all
 
   def initialize(list_of_emails)
       @emails = list_of_emails
@@ -18,11 +18,11 @@ attr_accessor :emails, :new
     @emails = @emails.split(" ")
     @emails.each do |email|
       email = email.chomp(",")
-        if @@all.none? {|x| x == email}
-          @@all << email
+        if @all.none? {|x| x == email}
+          @all << email
         end
     end
-    @@all
+    @all
   end
 
 end
